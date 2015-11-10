@@ -18,6 +18,10 @@
         ////////////////
 
         function activate() {
+  
+            
+            vm.leftValue=[{'name':'satish1'},{'name':'manish1'}]
+             vm.rightValue=[{'name':'satish2'},{'name':'manish2'}]
           
         }
     }

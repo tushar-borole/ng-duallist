@@ -16,41 +16,17 @@
     
     <!-- Include your CSS here -->
 </head>
-<body ng-controller="demoController">
+<body ng-controller="demoController as vm">
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
         href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <duallist></duallist>
+  
 
     <!-- Add your site or application content here -->
     <div class="container">
-       <div class="container">
-  <div class="row">
-        <div class="col-md-12 text-center"><h3>Pick List Example</h3></div>
-  		<div class="col-sm-4 col-sm-offset-1">
-          <div class="list-group" id="list1">
-          <a href="#" class="list-group-item active">List 1 <input title="toggle all" class="all pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Second item <input class="pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Third item <input class="pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">More item <input class="pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Another <input class="pull-right" type="checkbox"></a>
-          </div>
-        </div>
-        <div class="col-md-2 v-center">
-     		<button title="Send to list 2" class="btn btn-default center-block add"><i class="glyphicon glyphicon-chevron-right"></i></button>
-            <button title="Send to list 1" class="btn btn-default center-block remove"><i class="glyphicon glyphicon-chevron-left"></i></button>
-        </div>
-        <div class="col-sm-4">
-    	  <div class="list-group" id="list2">
-          <a href="#" class="list-group-item active">List 2 <input title="toggle all" class="all pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Alpha <input class="pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Charlie <input class="pull-right" type="checkbox"></a>
-          <a href="#" class="list-group-item">Bravo <input class="pull-right" type="checkbox"></a>
-          </div>
-        </div>
-  </div>
-</div>
+      
+      <duallist leftscope="vm.leftValue" rightscope="vm.rightValue"></duallist> 
     </div>
  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
