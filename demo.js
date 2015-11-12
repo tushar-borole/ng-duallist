@@ -22,7 +22,7 @@
 
             vm.options = {
                 leftContainerScrollEnd: function () {
-                    alert("inn")
+                  console.log("inn")
                     
                 },
                 rightContainerScrollEnd: function () {
