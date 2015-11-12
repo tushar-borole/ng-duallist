@@ -5,12 +5,12 @@
     flex-flow: column wrap;
 }
 
-.ngduallist .left-container {
+.ngduallist .left-container .left-sub-container{
     height: 300px;
     overflow-y: auto;
 }
 
-.ngduallist .right-container {
+.ngduallist .right-container .right-sub-container{
     height: 300px;
     overflow-y: auto;
 }
