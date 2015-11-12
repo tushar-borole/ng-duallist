@@ -62,9 +62,11 @@
                 'name': 'left9'
             }]
             vm.rightValue = [{
-                'name': 'satish2'
+                'name': 'right1'
             }, {
-                'name': 'manish2'
+                'name': 'Right2'
+            }, {
+                'name': 'Right3'
             }]
 
         }
