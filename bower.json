@@ -1,19 +1,20 @@
 {
-  "name": "angular-imagefit",
-  "description": "angular-imagefit",
-  "version": "0.0.3",
+  "name": "ng-duallist",
+  "description": "ng-duallist",
+  "version": "0.0.0",
   "authors": [
     "Tushar Borole <tushariscoolster@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/tushariscoolster/angular-imagefit"
+    "url": "https://github.com/tushariscoolster/ng-duallist"
   },
-  "homepage": "http://tushariscoolster.github.io/angular-imagefit/",
+  "homepage": "http://tushariscoolster.github.io/ng-duallist/",
   "license": "LGPL-2.1",
-  "main": "angular-unsaved-changes.js",
-  "keywords": ["angular-imagefit",
-               "angular"
+  "main": "ng-duallist.js",
+  "keywords": ["ng-duallist",
+               "angular",
+               "duallist"
   ],
   "ignore": [
     "gh-pages",

@@ -1,9 +1,9 @@
 {
-  "name": "angular-imagefit",
-  "version": "0.0.3",
+  "name": "ng-duallist",
+  "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tushariscoolster/angular-imagefit"
+    "url": "https://github.com/tushariscoolster/ng-duallist"
   },
   "devDependencies": {
     "grunt": "^0.4.1",
