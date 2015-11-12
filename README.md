@@ -25,7 +25,7 @@ Getting Started
     var app=angular.module("you app name",['ng-duallist'])
 ####  **Using directive**
 
-    <duallist duallist-option="vm.options" leftscope="vm.leftValue" rightscope="vm.rightValue"></duallist> 
+    <duallist template-url="template.html" duallist-option="vm.options" leftscope="vm.leftValue" rightscope="vm.rightValue"></duallist> 
 
 
 ### Documentation
