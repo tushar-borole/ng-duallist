@@ -20,6 +20,28 @@
         function activate() {
 
 
+            vm.options = {
+                leftContainerScrollEnd: function () {
+                  console.log("inn")
+                    
+                },
+                rightContainerScrollEnd: function () {
+                    console.log("inn")
+                    
+                },
+                leftContainerSearch: function (text) {
+                    console.log(text)
+
+                },
+                rightContainerSearch: function (text) {
+
+                    console.log(text)
+                },
+
+            };
+            console.log(vm.options)
+
+
             vm.leftValue = [{
                 'name': 'left1'
             }, {

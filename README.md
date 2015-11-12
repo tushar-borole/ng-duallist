@@ -1,8 +1,8 @@
 
-angular-imagefit
+ng-duallist
 ===================
 
-This directive is to fit image in container
+angular dual list directive with lazy load support
 
 ----------
 
@@ -14,18 +14,18 @@ Getting Started
 
 ####  **bower install**
 
-    bower install angular-imagefit
+    bower install ng-duallist
 
 ####  **npm install**
 
-    npm install angular-imagefit
+    npm install ng-duallist
 
 ####  **add dependency in you module**
 
-    var app=angular.module("you app name",['angular-imagefit'])
+    var app=angular.module("you app name",['ng-duallist'])
 ####  **Using directive**
 
-    <div class="my-scroll-area" imagefit imagefit-option="check" imagefit-error-src="http://www.paolobugatti.com/img/img-default.png">
+    <duallist duallist-option="vm.options" leftscope="vm.leftValue" rightscope="vm.rightValue"></duallist> 
 
 
 ### Documentation
@@ -35,37 +35,25 @@ Getting Started
 
 
     
-     $scope.check = {
-    scale: 'best-fill',
-      onLoad: function(imagecontainer, container) {},
-        onError: function(imagecontainer, container) {},
-        onStart: function(imagecontainer, container) {},
+     vm.options = {
+                leftContainerScrollEnd: function () { //left container scroll endevent for lazy load
+                  console.log("inn")
+                    
+                },
+                rightContainerScrollEnd: function () { // right container scroll end event for lazy load
+                    console.log("inn")
+                    
+                },
+                leftContainerSearch: function (text) { // left container search  event for lazy load
+                    console.log(text)
 
-    /**
-      Align the image within its frame. Possible values:
+                },
+                rightContainerSearch: function (text) { // right container search  event for lazy load
 
-      * **left**
-      * **right**
-      * **center**
-      * **top**
-      * **bottom**
-      * **top-left**
-      * **top-right**
-      * **bottom-left**
-      * **bottom-right**
+                    console.log(text)
+                },
 
-      @type String
-      @default center
-      @since Version 1.2
-    */
-    align: 'center',
-    parent: null,
-    hideParentOverflow: true,
-    fadeInDuration: 0,
-    rescaleOnResize: false,
-    didScale: function(firstTime, options) {},
-
-  }
+            }
 
    
 

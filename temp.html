@@ -1,57 +1,34 @@
-<!doctype html>
-<html lang="en" ng-app="demoApp">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Document</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="ngduallist.css">
-
-    <!-- Optional theme -->
-    <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> -->
-
-    <!-- Include your CSS here -->
-</head>
-
-<body ng-controller="demoController as vm">
-    <!--[if lt IE 9]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
-        href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-    <!-- Add your site or application content here -->
-    <div class="container">
-
-        <div class="row">
-          
-            <div class="col-sm-4 col-sm-offset-1">
-                <div class="list-group" id="list1"> <a href="#" class="list-group-item active">List 1 <input title="toggle all" class="all pull-right" ng-model="leftSelectAll" ng-change="selectAllLeftContainer()" type="checkbox"></a> <a ng-repeat="data in leftscope" href="#" class="list-group-item">{{data.name}}<input class="pull-right" ng-model="data.selected" type="checkbox"></a> </div>
+<div class="row ngduallist">
+    <div class="col-sm-4 left-container">
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-addon">
+                        <input title="toggle all" class="all pull-right" ng-model="leftSelectAll" ng-change="selectAllLeftContainer()" type="checkbox"> </div>
+                </div>
             </div>
-            <div class="col-md-2 v-center">
-                <button ng-click="moveRight()" title="Send to list 2" class="btn btn-default center-block add"><i class="glyphicon glyphicon-chevron-right"></i></button>
-                <button ng-click="moveLeft()" title="Send to list 1" class="btn btn-default center-block remove"><i class="glyphicon glyphicon-chevron-left"></i></button>
-            </div>
-            <div class="col-sm-4">
-                <div class="list-group" id="list2"> <a href="#" class="list-group-item active">List 2 <input ng-model="rightSelectAll" ng-change="selectAllRightContainer()" title="toggle all" class="all pull-right" type="checkbox"></a> <a ng-repeat="data in rightscope" href="#" class="list-group-item">{{data.name}} <input ng-model="data.selected"  class="pull-right" type="checkbox"></a> </div>
-            </div>
+        </form>
+        <div class="left-sub-container">
+            <div class="list-group" id="list1"> <a ng-repeat="data in leftscope" href="#" class="list-group-item">{{data.name}}<input class="pull-right" ng-model="data.selected" type="checkbox"></a> </div>
         </div>
     </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <!-- AngularJS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
-    <script src="ngduallist.js"></script>
-    <script src="demo.js"></script>
-    <!-- Include your JavaScript files here -->
-</body>
-
-</html>
+    <div class="col-md-2 v-center">
+        <button ng-click="moveRight()" title="Send to list 2" class="btn btn-default center-block add"><i class="glyphicon glyphicon-chevron-right"></i></button>
+        <button ng-click="moveLeft()" title="Send to list 1" class="btn btn-default center-block remove"><i class="glyphicon glyphicon-chevron-left"></i></button>
+    </div>
+    <div class="col-sm-4 right-container">
+        <form class="form-inline">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <div class="input-group-addon">
+                        <input ng-model="rightSelectAll" ng-change="selectAllRightContainer()" title="toggle all" class="all pull-right" type="checkbox"> </div>
+                </div>
+            </div>
+        </form>
+        <div  class="right-sub-container">
+            <div class="list-group" id="list2"> <a ng-repeat="data in rightscope" href="#" class="list-group-item">{{data.name}}<input ng-model="data.selected" class="pull-right" type="checkbox"></a> </div>
+        </div>
+    </div>
+</div>

@@ -29,15 +29,15 @@ module.exports = function (grunt)
                 commitMessage: 'Release v%VERSION%',
                 commitFiles: [
                     'bower.json',
-                    'angular-imagefit.js',
+                    'ngduallist.js',
                     'package.json',
-                    'image-scale.js'
+                    'ngduallist.css'
                 ],
                 createTag: true,
                 tagName: 'v%VERSION%',
                 tagMessage: 'Version %VERSION%',
                 push: false,
-                pushTo: 'git@github.com:tushariscoolster/angular-unsaved-changes.git',
+                pushTo: 'git@github.com:tushariscoolster/ng-duallist.git',
                 gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
                 globalReplace: false
             }
