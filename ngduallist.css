@@ -5,12 +5,21 @@
     flex-flow: column wrap;
 }
 
-.ngduallist .left-container .left-sub-container{
+.ngduallist .left-container .left-sub-container {
     height: 300px;
     overflow-y: auto;
 }
 
-.ngduallist .right-container .right-sub-container{
+.ngduallist .right-container .right-sub-container {
     height: 300px;
     overflow-y: auto;
+}
+
+.ngduallist .input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.ngduallist .input-group .input-group-addon {
+    width: 10px;
 }
