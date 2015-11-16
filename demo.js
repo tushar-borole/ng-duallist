@@ -5,10 +5,10 @@
         .module('demoApp', ['ng-duallist'])
         .controller('demoController', demoController);
 
-    demoController.$inject = ['$rootScope'];
+    demoController.$inject = ['$rootScope','$filter'];
 
     /* @ngInject */
-    function demoController($rootScope) {
+    function demoController($rootScope,$filter) {
         var vm = this;
         vm.property = 'demoController';
 
@@ -31,11 +31,12 @@
                 },
                 leftContainerSearch: function (text) {
                     console.log(text)
+                    vm.leftValue=$filter('filter')(leftValue,{'name':text})
 
                 },
                 rightContainerSearch: function (text) {
 
-                    console.log(text)
+                     vm.rightValue=$filter('filter')(rightValue,{'name':text})
                 },
 
             };
@@ -61,6 +62,7 @@
             }, {
                 'name': 'left9'
             }]
+            var leftValue=angular.copy(vm.leftValue)
             vm.rightValue = [{
                 'name': 'right1'
             }, {
@@ -68,6 +70,7 @@
             }, {
                 'name': 'Right3'
             }]
+             var rightValue=angular.copy(vm.rightValue)
 
         }
     }
