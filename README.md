@@ -35,25 +35,32 @@ Getting Started
 
 
     
-     vm.options = {
-                leftContainerScrollEnd: function () { //left container scroll endevent for lazy load
-                  console.log("inn")
-                    
-                },
-                rightContainerScrollEnd: function () { // right container scroll end event for lazy load
+    vm.options = {
+                leftContainerScrollEnd: function () {
                     console.log("inn")
-                    
+
                 },
-                leftContainerSearch: function (text) { // left container search  event for lazy load
+                rightContainerScrollEnd: function () {
+                    console.log("inn")
+
+                },
+                leftContainerSearch: function (text) {
                     console.log(text)
+                    vm.leftValue = $filter('filter')(leftValue, {
+                        'name': text
+                    })
 
                 },
-                rightContainerSearch: function (text) { // right container search  event for lazy load
+                rightContainerSearch: function (text) {
 
-                    console.log(text)
+                    vm.rightValue = $filter('filter')(rightValue, {
+                        'name': text
+                    })
                 },
+                leftContainerLabel: 'Available Lists',
+                rightContainerLabel: 'Selected Lists'
 
-            }
+            };
 
    
 

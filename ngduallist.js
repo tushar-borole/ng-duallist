@@ -22,8 +22,7 @@
                 leftscope: '=',
                 rightscope: '=',
                 'duallistOption': '=',
-                leftsearch: '=',
-                labelscope: '='
+                leftsearch: '='
             },
             bindToController: false,
             controller: Controller,
