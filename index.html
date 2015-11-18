@@ -1,43 +1,45 @@
 <!doctype html>
 <html lang="en" ng-app="demoApp">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Document</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="ngduallist.css">
- 
+
     <!-- Optional theme -->
     <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css"> -->
-    
+
     <!-- Include your CSS here -->
 </head>
+
 <body ng-controller="demoController as vm">
     <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
+        <div class="container">
+            <div class="navbar-header">
 
-          <a class="navbar-brand" href="#">ng-duallist</a>
+                <a class="navbar-brand" href="#">ng-duallist</a>
+            </div>
+
         </div>
-
-      </div>
     </nav>
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a
         href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  
+
 
     <!-- Add your site or application content here -->
     <div class="container">
-  
-      <duallist template-url="template.html" duallist-option="vm.options" leftscope="vm.leftValue" rightscope="vm.rightValue"></duallist> 
+
+        <duallist template-url="template.html" duallist-option="vm.options" leftscope="vm.leftValue" rightscope="vm.rightValue" labelscope="vm.labelscope"></duallist>
     </div>
- 
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -48,4 +50,5 @@
     <script src="demo.js"></script>
     <!-- Include your JavaScript files here -->
 </body>
+
 </html>

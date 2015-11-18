@@ -22,7 +22,8 @@
                 leftscope: '=',
                 rightscope: '=',
                 'duallistOption': '=',
-                leftsearch: '='
+                leftsearch: '=',
+                labelscope: '='
             },
             bindToController: false,
             controller: Controller,
@@ -129,7 +130,7 @@
             }
         };
 
-     
+
 
 
         /**
