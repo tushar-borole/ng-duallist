@@ -18,15 +18,43 @@
         ////////////////
 
         function activate() {
+            vm.leftValue = [];
+            var leftcounter = 0;
+            vm.rightValue = [];
+            var rightcounter = 0;
+
+            function loadMoreLeft() {
+                for (var i = 0; i < 15; i++) {
+                    vm.leftValue.push({
+                        'name': 'left' + leftcounter
+                    });
+                    leftcounter += 10;
+                }
+
+
+
+            }
+
+            function loadMoreRight() {
+                for (var i = 0; i < 15; i++) {
+                    vm.rightValue.push({
+                        'name': 'right' + leftcounter
+                    });
+                    rightcounter += 10;
+                }
+
+
+            }
 
 
             vm.options = {
                 leftContainerScrollEnd: function () {
-                    console.log("inn")
+                    loadMoreLeft()
+
 
                 },
                 rightContainerScrollEnd: function () {
-                    console.log("inn")
+                    loadMoreRight();
 
                 },
                 leftContainerSearch: function (text) {
@@ -43,38 +71,24 @@
                     })
                 },
                 leftContainerLabel: 'Available Lists',
-                rightContainerLabel: 'Selected Lists'
+                rightContainerLabel: 'Selected Lists',
+                onMoveRight: function () {
+                    console.log('right')
+
+                },
+                onMoveLeft: function () {
+                    console.log('left')
+
+                }
 
             };
             console.log(vm.options)
+            loadMoreLeft();
+            loadMoreRight();
 
-            vm.leftValue = [{
-                'name': 'left1'
-            }, {
-                'name': 'left2'
-            }, {
-                'name': 'left3'
-            }, {
-                'name': 'left4'
-            }, {
-                'name': 'left5'
-            }, {
-                'name': 'left6'
-            }, {
-                'name': 'left7'
-            }, {
-                'name': 'left8'
-            }, {
-                'name': 'left9'
-            }]
+
             var leftValue = angular.copy(vm.leftValue)
-            vm.rightValue = [{
-                'name': 'right1'
-            }, {
-                'name': 'Right2'
-            }, {
-                'name': 'Right3'
-            }]
+     
             var rightValue = angular.copy(vm.rightValue)
 
         }
