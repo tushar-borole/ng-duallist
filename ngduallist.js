@@ -40,10 +40,10 @@
 
             if (scope.duallistOption.leftContainerScrollEnd) { // excecute the left container scroll end event
                 $(element).find('.left-sub-container').bind('scroll', function () {
-                     console.log($(this)[0].scrollHeight - $(this).scrollTop())
-                             console.log($(this).outerHeight())
+                    console.log($(this)[0].scrollHeight - $(this).scrollTop())
+                    console.log($(this).outerHeight())
                     if ($(this)[0].scrollHeight - $(this).scrollTop() === $(this).height()) {
-                       
+
                         scope.$evalAsync(scope.duallistOption.leftContainerScrollEnd);
                     };
                 });
@@ -71,25 +71,25 @@
 
                 })
             }
-            
-             if (scope.duallistOption.onMoveRight) { //right serach text chage
+
+            if (scope.duallistOption.onMoveRight) { //right serach text chage
                 $(element).find('#moveRightButton').bind("click", function () {
-                  
+
                     scope.$evalAsync(scope.duallistOption.onMoveRight)
 
                 })
             }
-            
-            
-             if (scope.duallistOption.onMoveLeft) { //right serach text chage
+
+
+            if (scope.duallistOption.onMoveLeft) { //right serach text chage
                 $(element).find('#moveLeftButton').bind("click", function () {
-                    
+
                     scope.$evalAsync(scope.duallistOption.onMoveLeft);
 
                 })
-            }
-            
-            
+            };
+
+
 
 
         }
