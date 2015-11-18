@@ -104,7 +104,7 @@
 
 
 
-
+            $scope.leftSelectAll = false;
 
         };
 
@@ -127,6 +127,7 @@
                 }
 
             }
+            $scope.rightSelectAll = false;
         };
 
 
@@ -156,8 +157,7 @@
                 } else {
                     val.selected = false;
                 }
-            })
-
+            });
         }
 
     }

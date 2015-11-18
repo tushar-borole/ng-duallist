@@ -8,11 +8,13 @@
 .ngduallist .left-container .left-sub-container {
     height: 300px;
     overflow-y: auto;
+    border: 1px solid #e5e5e5;
 }
 
 .ngduallist .right-container .right-sub-container {
     height: 300px;
     overflow-y: auto;
+    border: 1px solid #e5e5e5;
 }
 
 .ngduallist .input-group {
@@ -22,4 +24,16 @@
 
 .ngduallist .input-group .input-group-addon {
     width: 10px;
+}
+
+.ngduallist label {
+    display: block;
+    color: #578ebe;
+    text-transform: uppercase;
+}
+
+.ngduallist .info {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 11px;
 }
