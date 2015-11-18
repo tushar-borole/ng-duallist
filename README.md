@@ -35,13 +35,14 @@ Getting Started
 
 
     
-    vm.options = {
+      vm.options = {
                 leftContainerScrollEnd: function () {
-                    console.log("inn")
+                    loadMoreLeft()
+
 
                 },
                 rightContainerScrollEnd: function () {
-                    console.log("inn")
+                    loadMoreRight();
 
                 },
                 leftContainerSearch: function (text) {
@@ -58,7 +59,15 @@ Getting Started
                     })
                 },
                 leftContainerLabel: 'Available Lists',
-                rightContainerLabel: 'Selected Lists'
+                rightContainerLabel: 'Selected Lists',
+                onMoveRight: function () {
+                    console.log('right')
+
+                },
+                onMoveLeft: function () {
+                    console.log('left')
+
+                }
 
             };
 
