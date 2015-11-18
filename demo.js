@@ -42,15 +42,11 @@
                         'name': text
                     })
                 },
+                leftContainerLabel: 'Available Lists',
+                rightContainerLabel: 'Selected Lists'
 
             };
             console.log(vm.options)
-
-            vm.labelscope = {
-                availableText: 'Available Lists',
-                selectedText: 'Selected Lists'
-            }
-
 
             vm.leftValue = [{
                 'name': 'left1'
