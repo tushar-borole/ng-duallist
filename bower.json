@@ -10,7 +10,7 @@
     "url": "https://github.com/tushariscoolster/ng-duallist"
   },
   "homepage": "http://tushariscoolster.github.io/ng-duallist/",
-  "license": "LGPL-2.1",
+  "license": "MIT",
   "main": "ng-duallist.js",
   "keywords": ["ng-duallist",
                "angular",
