@@ -6,11 +6,11 @@
         .directive('duallist', ngDuallist)
         .run(templateCache)
 
-    ngDuallist.$inject = ['$rootScope', '$filter','$parse'];
-    templateCache.$inject = ['$templateCache','$parse'];
+    ngDuallist.$inject = ['$rootScope', '$filter', '$parse'];
+    templateCache.$inject = ['$templateCache', '$parse'];
 
     /* @ngInject */
-    function ngDuallist($rootScope, $filter,$parse) {
+    function ngDuallist($rootScope, $filter, $parse) {
         // Usage:
         //
         // Creates:
@@ -22,7 +22,10 @@
                 leftscope: '=',
                 rightscope: '=',
                 'duallistOption': '=',
-                leftsearch: '='
+                leftsearch: '=',
+                rightsearch: '=',
+                addscope: '=',
+                removescope: '='
             },
             bindToController: false,
             controller: Controller,
@@ -119,6 +122,8 @@
                 if ($scope.leftscope[i].selected) {
                     $scope.leftscope[i].selected = false
                     $scope.rightscope.push($scope.leftscope[i]);
+                    // get the add objects
+                    $scope.addscope.push($scope.leftscope[i]);
                     var index = $scope.leftscope.indexOf($scope.leftscope[i]);
                     $scope.leftscope.splice(index, 1)
                     i--
@@ -138,12 +143,14 @@
          */
         $scope.moveLeft = function () {
             //var leftSelectedValue=$filter()
-            console.log($scope.rightscope)
+            // console.log($scope.rightscope)
             for (var i = 0; i < $scope.rightscope.length; i++) {
-                console.log(i)
+                // console.log(i)
                 if ($scope.rightscope[i].selected) {
                     $scope.rightscope[i].selected = false
                     $scope.leftscope.push($scope.rightscope[i]);
+                    // get the remove objects
+                    $scope.removescope.push($scope.rightscope[i]);
                     var index = $scope.rightscope.indexOf($scope.rightscope[i]);
                     // console.log(index)
                     $scope.rightscope.splice(index, 1)

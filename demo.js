@@ -22,6 +22,8 @@
             var leftcounter = 0;
             vm.rightValue = [];
             var rightcounter = 0;
+            vm.addValue = [];
+            vm.removeValue = [];
 
             function loadMoreLeft() {
                 for (var i = 0; i < 15; i++) {
@@ -38,7 +40,7 @@
             function loadMoreRight() {
                 for (var i = 0; i < 15; i++) {
                     vm.rightValue.push({
-                        'name': 'right' + leftcounter
+                        'name': 'right' + rightcounter
                     });
                     rightcounter += 10;
                 }
@@ -73,12 +75,13 @@
                 leftContainerLabel: 'Available Lists',
                 rightContainerLabel: 'Selected Lists',
                 onMoveRight: function () {
-                    console.log('right')
+                    console.log('right');
+                    console.log(vm.addValue);
 
                 },
                 onMoveLeft: function () {
-                    console.log('left')
-
+                    console.log('left');
+                    console.log(vm.removeValue);
                 }
 
             };
@@ -88,7 +91,7 @@
 
 
             var leftValue = angular.copy(vm.leftValue)
-     
+
             var rightValue = angular.copy(vm.rightValue)
 
         }
