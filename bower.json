@@ -11,7 +11,7 @@
   },
   "homepage": "http://tushariscoolster.github.io/ng-duallist/",
   "license": "MIT",
-  "main": "ng-duallist.js",
+  "main": "ngduallist.js",
   "keywords": ["ng-duallist",
                "angular",
                "duallist"
